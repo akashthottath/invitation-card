@@ -1,0 +1,59 @@
+:root{--maroon:#6b0f1a;--deep:#3d0710;--gold:#c9973a;--cream:#fff7e6;--ink:#3b1a10;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cormorant Garamond","Noto Serif Malayalam",serif;font-size:19px;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+.ml{font-family:"Noto Serif Malayalam",serif}.it{font-style:italic}.mono{font:12px/1.4 ui-monospace,monospace;letter-spacing:.25em;opacity:.75}
+.intro{position:fixed;inset:0;z-index:9;background:linear-gradient(#3d0710aa,#3d0710cc),var(--bg) center/cover;color:#f0d28a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:20px;
+transition:opacity 2s,visibility 2s}
+.intro.gone{opacity:0;visibility:hidden}.intro h2{margin:0;font-weight:500;font-size:clamp(26px,6vw,40px)}
+.draw{width:min(560px,92vw)}.draw path{fill:none;stroke:#f0d28a;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:d 1.6s ease forwards}
+@keyframes d{to{stroke-dashoffset:0}}
+.pill{display:inline-block;padding:11px 22px;border-radius:40px;border:1px solid var(--maroon);background:var(--maroon);color:#f0d28a;text-decoration:none;font:inherit;cursor:pointer}
+.pill.ghost{background:transparent;color:var(--maroon)}.pill.light{background:transparent;color:#f0d28a;border-color:#f0d28a}
+.page{max-width:720px;margin:0 auto;opacity:0;transform:translateY(24px);transition:all 1.4s 2s;text-align:center}.page.show{opacity:1;transform:none}
+.hero,.block{padding:48px 22px;border-bottom:1px solid #c9973a55}.hero h1{font-size:clamp(40px,11vw,64px);color:var(--maroon);margin:.1em 0}
+.script{font-family:"Great Vibes",cursive;font-size:clamp(54px,15vw,92px);color:var(--maroon);line-height:1.15}.script small{display:block;font-size:.4em;color:var(--gold)}.script.sm{font-size:42px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}.two p{margin:0}.two span{font-size:16px;opacity:.8}.two b{color:var(--maroon);letter-spacing:.2em;text-transform:uppercase;font-size:14px}
+.date{display:inline-flex;gap:16px;align-items:center;margin:14px 0;padding:10px 26px;border:1.5px solid var(--gold);border-radius:14px}.date b{font-size:64px;color:var(--maroon);line-height:1}.date span{text-align:left;letter-spacing:.25em;font-size:13px}
+.cd{display:flex;justify-content:center;gap:10px;margin:14px 0 26px}.cd div{width:70px;padding:8px 0;border-radius:10px;background:var(--maroon);color:#f0d28a}.cd b{display:block;font-size:26px}.cd span{font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+h3{color:var(--maroon);margin:22px 0 0}.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.toggle{display:inline-flex;border:1px solid var(--maroon);border-radius:40px;overflow:hidden;margin:10px 0}.toggle button{border:0;background:none;padding:8px 26px;font:inherit;cursor:pointer;color:var(--maroon)}.toggle .on{background:var(--maroon);color:#f0d28a}
+.fig{display:block;height:260px;margin:8px auto;filter:drop-shadow(0 8px 10px #0003);transition:all .3s}.sw{display:flex;gap:10px;justify-content:center;margin-top:8px}
+.sw button{width:32px;height:32px;border-radius:50%;border:2px solid #fff;outline:1px solid #0003;cursor:pointer}.sw .on{outline:2px solid var(--maroon)}
+
+.page{max-width:720px;margin:0 auto;box-shadow:none;background:none}
+.hero{background:radial-gradient(circle at 15% 0%,#c9973a26,transparent 45%),radial-gradient(circle at 90% 100%,#c9973a26,transparent 45%)}
+.love{background:radial-gradient(circle at 50% 0%,#c9973a26,transparent 55%)}
+.draw{width:min(420px,80vw)}.draw path{fill:#f0d28a0d}.spin{animation:sp 90s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}.gold{margin:0}
+.fam-line{font-size:24px;font-weight:700;color:var(--maroon);margin:0 0 14px}.love .two{grid-template-columns:1fr 1fr;gap:4px 12px}
+.rv{opacity:0;transform:translateY(26px);transition:all 1s}.rv.in{opacity:1;transform:none}
+
+.scene1{position:absolute;left:0;right:0;top:14%;bottom:16%;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;padding:0 20px;animation:sc 6s forwards}
+@keyframes sc{0%{opacity:0}6%,88%{opacity:1}100%{opacity:0}}
+.clk{display:flex;flex-direction:column;align-items:center;opacity:0;animation:cin .8s forwards}.clk svg{width:100px}.clk b{font-size:22px;letter-spacing:.08em}.clk span{font:11px ui-monospace,monospace;letter-spacing:.25em;opacity:.8}
+.hand{stroke:#f0d28a;stroke-linecap:round;transform-box:view-box;transform-origin:50px 50px;animation:hand 2.4s .5s cubic-bezier(.3,.7,.2,1) both}
+@keyframes hand{from{transform:rotate(var(--a0))}to{transform:rotate(var(--a1))}}@keyframes cin{to{opacity:1}}
+.threadbox{position:relative;height:84px}.thread{height:100%;width:34px}.thread path{fill:none;stroke:#f0d28a;stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:d 2s 1.5s forwards;filter:drop-shadow(0 0 4px #f0d28a)}
+.hrt{position:absolute;left:50%;top:50%;margin:-12px 0 0 -9px;color:#ff5d73;font-size:20px;opacity:0;animation:pop .8s 3.6s forwards}
+@keyframes pop{0%{opacity:0;transform:scale(.3)}70%{transform:scale(1.3)}100%{opacity:1;transform:scale(1)}}
+.cap{margin:6px 0 0;font-size:16px;opacity:0;animation:cin 1s 3.8s forwards}.cap.ml{font-size:15px}
+.after{display:flex;flex-direction:column;align-items:center;gap:12px;opacity:0;animation:cin 1s 5.8s forwards}
+
+/* Hero like the reference: faded Radha–Krishna hands behind the names */
+.page{max-width:none}.rv{max-width:720px;margin-left:auto;margin-right:auto}
+.hero{position:relative;overflow:hidden;isolation:isolate;background:var(--cream)}
+.hero::before,.hero::after{content:"";position:absolute;z-index:-1;pointer-events:none;mix-blend-mode:multiply}
+.hero::before{inset:0;background:var(--full) center/cover no-repeat;opacity:.3}
+.hero::after{display:none}
+@media (min-width:820px){
+  .hero{padding-top:64px;padding-bottom:64px}
+  .hero::before{inset:0 auto 0 0;width:46%;background:var(--top) left top/contain no-repeat;opacity:.42}
+  .hero::after{display:block;inset:0 0 0 auto;width:46%;background:var(--bot) right bottom/contain no-repeat;opacity:.42}
+}
+
+/* readability fixes: soft-faded art (no hard edges) + cream panel behind the family details */
+.hero::before{-webkit-mask-image:none;mask-image:none}
+@media (min-width:820px){
+  .hero::before{width:42%;opacity:.5;-webkit-mask-image:radial-gradient(ellipse at 0 0,#000 50%,transparent 82%);mask-image:radial-gradient(ellipse at 0 0,#000 50%,transparent 82%)}
+  .hero::after{width:44%;opacity:.5;-webkit-mask-image:radial-gradient(ellipse at 100% 100%,#000 50%,transparent 82%);mask-image:radial-gradient(ellipse at 100% 100%,#000 50%,transparent 82%)}
+}
+.hero .two{background:#fff7e6f2;border:1px solid #c9973a55;border-radius:18px;padding:18px 16px;margin-top:22px}
+.hero .two span{opacity:1}
